@@ -1,25 +1,37 @@
  💰 Personal Finance Tracker
 
-A simple and interactive Personal Finance Dashboard built with Python and Streamlit.
+Web dashboard for monthly spending: bar chart, optional pie chart, month filter, and transaction table. The live app is built with **Next.js** and is ready to deploy on [Vercel](https://vercel.com). The original Streamlit version is kept under `streamlit-legacy/` if you want to run it locally with Python.
 
-## Features
-1. Monthly spending analysis
-2. Interactive Bar Chart and Pie Chart
-3. Filter by month
-4. Clean and beginner-friendly design
-5. Easy to customize with your own data
+## Deploy on Vercel
 
-## How to Run Locally
+1. Push this repository to GitHub (already set up for Next.js in the project root).
+2. In Vercel, **Import Project** → select this repo.
+3. Framework preset: **Next.js** (default). Build: `npm run build`, Output: handled automatically.
+4. Deploy. No extra environment variables are required for the sample dashboard.
+
+## Run Next.js locally
+
+Requires [Node.js](https://nodejs.org/) 18+.
 
 ```bash
-1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/personal-finance-tracker.git
+npm install
+npm run dev
+```
 
-2. Go to project folder
-cd personal-finance-tracker
+Open http://localhost:3000
 
-3. Install dependencies
-pip install -r requirements.txt
+## Optional: Streamlit (local only)
 
-4. Run the dashboard
-streamlit run src/dashboard.py
+Streamlit uses a long-running server and is **not** used for the Vercel deployment.
+
+```bash
+pip install -r streamlit-legacy/requirements.txt
+streamlit run streamlit-legacy/dashboard.py
+```
+
+## Features
+
+1. Monthly spending analysis  
+2. Bar chart and optional pie chart  
+3. Filter by month  
+4. Optional full transaction table  
