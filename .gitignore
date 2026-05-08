@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# Next.js
+/.next/
+/out/
+
+# misc
+*.pem
+npm-debug.log*
+.DS_Store
+*.tsbuildinfo
+
+# env
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# IDE
+.idea
+.vscode
