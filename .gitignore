@@ -24,3 +24,13 @@ npm-debug.log*
 # IDE
 .idea
 .vscode
+
+# Local portable / failed Node extracts
+.node-runtime/
+.tools-node/
+
+# Local portable / failed Node extracts (do not commit)
+.node-runtime/
+.tools-node/
+.tools-node-extract/
+.node/
