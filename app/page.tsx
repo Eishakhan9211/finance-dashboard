@@ -44,6 +44,8 @@ const ROWS = [
 
 const MONTH_ORDER = ["Jan-2026", "Feb-2026", "Mar-2026", "Apr-2026"] as const;
 
+type Month = (typeof MONTH_ORDER)[number];
+
 const PIE_COLORS = [
   "#22c55e",
   "#3b82f6",
@@ -63,7 +65,7 @@ export default function Home() {
     return MONTH_ORDER.filter((m) => set.has(m));
   }, []);
 
-  const [selectedMonth, setSelectedMonth] = useState(months[0] ?? "Jan-2026");
+  const [selectedMonth, setSelectedMonth] = useState<Month>(months[0] ?? "Jan-2026");
   const [showPie, setShowPie] = useState(false);
   const [showTable, setShowTable] = useState(false);
 
@@ -102,7 +104,7 @@ export default function Home() {
         <select
           className="w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-green-500/40 focus:ring-2"
           value={selectedMonth}
-          onChange={(e) => setSelectedMonth(e.target.value)}
+          onChange={(e) => setSelectedMonth(e.target.value as Month)}
         >
           {months.map((m) => (
             <option key={m} value={m}>
